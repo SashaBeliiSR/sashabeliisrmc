@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Sasha_BeliiSR Server</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+            font-family: "Minecraft", Arial, sans-serif;
+            overflow: hidden;
+			background-image: url("back/2.png");
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            background-image: url("form.png");
+            background-size: 48%;
+            background-repeat: no-repeat;
+            background-position: center;
+            padding: 20px;
+        }
+        h1, h2 {
+            margin: 0;
+            font-size: 40px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        a {
+            color: #22BBFF;
+            text-decoration: none;
+        }
+		#buy {
+			color: #F07427;
+		}
+        @font-face {
+            font-family: 'Minecraft';
+            src: url('minecraft.ttf') format('truetype');
+        }
+    </style>
+</head>
+<body>
+    <audio id="background-music" loop></audio>
+    <audio id="click-sound" src="click.mp3" volume="100" autoplay="true"></audio>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var backgroundImages = ['back/1.png', 'back/2.png', 'back/3.png', 'back/4.png', 'back/5.png', 'back/6.png', 'back/7.png', 'back/8.png', 'back/9.png'];
+            var musicTracks = ['music/calm1.ogg', 'music/calm2.ogg', 'music/calm3.ogg'];
+            var currentIndex = 0;
+            var body = document.body;
+            var backgroundMusic = document.getElementById('background-music');
+            var clickSound = document.getElementById('click-sound');
+
+            function changeBackground() {
+                currentIndex = (currentIndex + 1) % backgroundImages.length;
+                body.style.backgroundImage = 'url(' + backgroundImages[currentIndex] + ')';
+            }
+
+            function playRandomMusic() {
+                var randomIndex = Math.floor(Math.random() * musicTracks.length);
+                backgroundMusic.src = musicTracks[randomIndex];
+                backgroundMusic.autoplay = true;
+            }
+
+            setInterval(changeBackground, 5000);
+            playRandomMusic();
+        });
+
+        function playClickSound() {
+            clickSound.play();
+        }
+    </script>
+    <div class="container">
+        <h1>Sasha_BeliiSR Server</h1>
+        <h2><a href="minecraft://server/Sasha_BeliiSR.aternos.me:35492">Sasha_BeliiSR.aternos.me:35492</a></h2>
+        <br><br><br>
+        <h2>Buy add to white list of server</h2>
+		<h2>Select gamemode:</h2>
+        <br>
+        <div style="display: flex; justify-content: space-between; width: 30%;">
+            <div>
+                <h2 style="color: #40FF32;">Survive</h2>
+                <!--<h2 style="color: #40FF32;"><s>3$</s> 0$</h2>-->
+				<img src="survive.png" height="64">
+                <h2 style="color: #40FF32;"><a href="buy.html" onclick="playClickSound()" id="buy">Get key</a></h2>
+            </div>
+            <div>
+                <h2 style="color: #FF0A2B;">Creative</h2>
+                <!--<h2 style="color: #FF0A2B;"><s>20$</s> 15$</h2>-->
+				<img src="creative.png" height="64">
+                <h2 style="color: #FF0A2B;"><a href="buy-error.html" onclick="playClickSound()" id="buy">Get key</a></h2>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
