@@ -168,6 +168,22 @@
 		  keyElement.style.display = "flex";
 		  mainElement.style.display = "none";
 		}
+		
+		function goMods() {
+		  var keyElement = document.getElementById("main");
+		  var mainElement = document.getElementById("mods");
+
+		  keyElement.style.display = "none";
+		  mainElement.style.display = "flex";
+		}
+		
+		function goMain() {
+		  var keyElement = document.getElementById("mods");
+		  var mainElement = document.getElementById("main");
+
+		  keyElement.style.display = "none";
+		  mainElement.style.display = "flex";
+		}
 
     </script>
     <div class="container" id="main" style="display: flex;">
@@ -191,8 +207,7 @@
                 <h2 style="color: #FF0A2B;"><a onclick="goCreative()" id="buy" style="display: none;">Get key</a></h2>
             </div>
         </div><br><br><br><br><br><br>
-		<a href="mods.zip" type="donwload"><button>Donwload Mods.zip</button></a>
-		<a href="mods.z01" type="donwload"><button>Donwload mods.z01</button></a>
+		<button onclick="goMods()">Mods</button>
     </div>
 	
 	<div class="container" style="display: none;" id="key">
@@ -206,5 +221,106 @@
 		
 		<h1>Onput:</h1>
 		<input id="input-key" placeholder="None" readonly></input><button onclick="copyText()">Copy!</button>
+	</div>
+	
+	<div class="container" style="display: none;" id="mods">
+		<a onclick="goMain()"><h1 style="color: blue;">Go to Main Menu</h1></a><br><br>
+		<h1 style="color: red;">13 Mods</h1>
+		
+		<table style="border-collapse: collapse; width: 47%; height: 39px;" border="1">
+			<tbody>
+				<tr style="height: 39px;">
+					<td style="width: 25%; height: 39px; text-align: center;">Security Craft</td>
+					<td style="width: 25%; height: 39px; text-align: center;">1.16.5-SecurityCraft-v1.9.7.1.jar</td>
+					<td style="width: 25%; height: 39px; text-align: center;">1.16.5</td>
+					<td style="width: 25%; height: 39px; text-align: center;"><span style="color: #00ff00;"><a style="color: #00ff00;" href="mods\1.16.5-SecurityCraft-v1.9.7.1.jar">Donwload</a></span></td>
+				</tr>
+				
+				<tr style="height: 39px;">
+					<td style="width: 25%; height: 39px; text-align: center;">Modern Life</td>
+					<td style="width: 25%; height: 39px; text-align: center;">modernlife-1.16.5-1.51.jar</td>
+					<td style="width: 25%; height: 39px; text-align: center;">1.16.5</td>
+					<td style="width: 25%; height: 39px; text-align: center;"><span style="color: #00ff00;"><a style="color: #00ff00;" href="mods\modernlife-1.16.5-1.51.jar">Donwload</a></span></td>
+				</tr>
+				
+				<tr style="height: 39px;">
+					<td style="width: 25%; height: 39px; text-align: center;">MrCrayfish's Furniture Mod</td>
+					<td style="width: 25%; height: 39px; text-align: center;">cfm-7.0.0pre22-1.16.3.jar</td>
+					<td style="width: 25%; height: 39px; text-align: center;">1.16.5</td>
+					<td style="width: 25%; height: 39px; text-align: center;"><span style="color: #00ff00;"><a style="color: #00ff00;" href="mods\cfm-7.0.0pre22-1.16.3.jar">Donwload</a></span></td>
+				</tr>
+				
+				<tr style="height: 39px;">
+					<td style="width: 25%; height: 39px; text-align: center;">Simply Light</td>
+					<td style="width: 25%; height: 39px; text-align: center;">simplylight-1.16.5-1.4.2-build.32.jar</td>
+					<td style="width: 25%; height: 39px; text-align: center;">1.16.5 OptiFine</td>
+					<td style="width: 25%; height: 39px; text-align: center;"><span style="color: #00ff00;"><a style="color: #00ff00;" href="mods\simplylight-1.16.5-1.4.2-build.32.jar">Donwload</a></span></td>
+				</tr>
+				
+				<tr style="height: 39px;">
+					<td style="width: 25%; height: 39px; text-align: center;">Just Enough Items (JEI)</td>
+					<td style="width: 25%; height: 39px; text-align: center;">jei-1.16.5-7.8.0.1009.jar</td>
+					<td style="width: 25%; height: 39px; text-align: center;">1.16.5</td>
+					<td style="width: 25%; height: 39px; text-align: center;"><span style="color: #00ff00;"><a style="color: #00ff00;" href="mods\jei-1.16.5-7.8.0.1009.jar">Donwload</a></span></td>
+				</tr>
+				
+				<tr style="height: 39px;">
+					<td style="width: 25%; height: 39px; text-align: center;">Create Mod</td>
+					<td style="width: 25%; height: 39px; text-align: center;">create-mc1.16.5_v0.3.2g.jar</td>
+					<td style="width: 25%; height: 39px; text-align: center;">1.16.5</td>
+					<td style="width: 25%; height: 39px; text-align: center;"><span style="color: #00ff00;"><a style="color: #00ff00;" href="mods\create-mc1.16.5_v0.3.2g.jar">Donwload</a></span></td>
+				</tr>
+				
+				<tr style="height: 39px;">
+					<td style="width: 25%; height: 39px; text-align: center;">FlyWeel</td>
+					<td style="width: 25%; height: 39px; text-align: center;">flywheel-1.16-0.2.5.jar</td>
+					<td style="width: 25%; height: 39px; text-align: center;">1.16.5</td>
+					<td style="width: 25%; height: 39px; text-align: center;"><span style="color: #00ff00;"><a style="color: #00ff00;" href="mods\flywheel-1.16-0.2.5.jar">Donwload</a></span></td>
+				</tr>
+				
+				<tr style="height: 39px;">
+					<td style="width: 25%; height: 39px; text-align: center;">Valkyrien Skies</td>
+					<td style="width: 25%; height: 39px; text-align: center;">ValkyrienSkies-Forge-1.16.5-v2.0.0-alpha6.jar</td>
+					<td style="width: 25%; height: 39px; text-align: center;">1.16.5</td>
+					<td style="width: 25%; height: 39px; text-align: center;"><span style="color: #00ff00;"><a style="color: #00ff00;" href="mods\ValkyrienSkies-Forge-1.16.5-v2.0.0-alpha6.jar">Donwload</a></span></td>
+				</tr>
+				
+				<tr style="height: 39px;">
+					<td style="width: 25%; height: 39px; text-align: center;">Cloth Api</td>
+					<td style="width: 25%; height: 39px; text-align: center;">cloth-config-4.16.91-1.16-forge.jar</td>
+					<td style="width: 25%; height: 39px; text-align: center;">1.16.5</td>
+					<td style="width: 25%; height: 39px; text-align: center;"><span style="color: #00ff00;"><a style="color: #00ff00;" href="mods\cloth-config-4.16.91-1.16-forge.jar">Donwload</a></span></td>
+				</tr>
+				
+				<tr style="height: 39px;">
+					<td style="width: 25%; height: 39px; text-align: center;">Architectury API Forge</td>
+					<td style="width: 25%; height: 39px; text-align: center;">architectury-1.32.68-forge-1.16.5.jar</td>
+					<td style="width: 25%; height: 39px; text-align: center;">1.16.5</td>
+					<td style="width: 25%; height: 39px; text-align: center;"><span style="color: #00ff00;"><a style="color: #00ff00;" href="mods\architectury-1.32.68-forge-1.16.5.jar">Donwload</a></span></td>
+				</tr>
+				
+				<tr style="height: 39px;">
+					<td style="width: 25%; height: 39px; text-align: center;">Eureka Airships</td>
+					<td style="width: 25%; height: 39px; text-align: center;">EurekaAirships-Forge-1.16.5-v1.0.0-alpha7.jar</td>
+					<td style="width: 25%; height: 39px; text-align: center;">1.16.5</td>
+					<td style="width: 25%; height: 39px; text-align: center;"><span style="color: #00ff00;"><a style="color: #00ff00;" href="mods\EurekaAirships-Forge-1.16.5-v1.0.0-alpha7.jar">Donwload</a></span></td>
+				</tr>
+				
+				<tr style="height: 39px;">
+					<td style="width: 25%; height: 39px; text-align: center;">World Edit</td>
+					<td style="width: 25%; height: 39px; text-align: center;">worldedit-1.16.53-forge-fabric-7.2.5-dist.jar</td>
+					<td style="width: 25%; height: 39px; text-align: center;">1.16.5</td>
+					<td style="width: 25%; height: 39px; text-align: center;"><span style="color: #00ff00;"><a style="color: #00ff00;" href="mods\worldedit-1.16.53-forge-fabric-7.2.5-dist.jar">Donwload</a></span></td>
+				</tr>
+				
+				<tr style="height: 39px;">
+					<td style="width: 25%; height: 39px; text-align: center;">Simple Voice Chat</td>
+					<td style="width: 25%; height: 39px; text-align: center;">voicechat-fabric-1.16.5-2.4.16.jar</td>
+					<td style="width: 25%; height: 39px; text-align: center;">1.16.5</td>
+					<td style="width: 25%; height: 39px; text-align: center;"><span style="color: #00ff00;"><a style="color: #00ff00;" href="mods\voicechat-fabric-1.16.5-2.4.16.jar">Donwload</a></span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
 </body>
 </html>
