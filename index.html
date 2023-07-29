@@ -179,35 +179,48 @@
 		
 		function goMain() {
 		  var keyElement = document.getElementById("mods");
+		  var key2Element = document.getElementById("support");
+		  var mainElement = document.getElementById("main");
+		  
+		  key2Element.style.display = "none";
+		  keyElement.style.display = "none";
+		  mainElement.style.display = "flex";
+		}
+		
+		function goMain() {
+		  var keyElement = document.getElementById("support");
 		  var mainElement = document.getElementById("main");
 
 		  keyElement.style.display = "none";
 		  mainElement.style.display = "flex";
 		}
-
     </script>
     <div class="container" id="main" style="display: flex;">
-        <h1>Sasha_BeliiSR Server</h1>
+        <h1>Sasha_BeliiSR Сервер</h1>
         <h2><a id="server" onclick="copyMyText()">Sasha_BeliiSR.aternos.me:35492</a></h2>
         <br><br><br>
-        <h2>Buy add to white list of server</h2>
-		<h2>Select gamemode:</h2>
+        <!--<h2>Buy add to white list of server</h2>-->
+		<h2>Выберите режим игры:</h2>
         <br>
         <div style="display: flex; justify-content: space-between; width: 30%;">
             <div>
-                <h2 style="color: #40FF32;">Survive</h2>
+                <h2 style="color: #40FF32;">Выживание</h2>
                 <!--<h2 style="color: #40FF32;"><s>3$</s> 0$</h2>-->
 				<img src="survive.png" height="64">
                 <h2 style="color: #40FF32;"><a onclick="goSurvive()" id="buy" style="display: none;">Get key</a></h2>
             </div>
             <div>
-                <h2 style="color: #FF0A2B;">Creative</h2>
+                <h2 style="color: #FF0A2B;">Творчерский</h2>
                 <!--<h2 style="color: #FF0A2B;"><s>20$</s> 15$</h2>-->
 				<img src="creative.png" height="64">
                 <h2 style="color: #FF0A2B;"><a onclick="goCreative()" id="buy" style="display: none;">Get key</a></h2>
             </div>
         </div><br><br><br><br><br><br>
-		<button onclick="goMods()">Mods</button>
+		<button onclick="goMods()">Моды</button><br><br><br>
+		<button onclick="goSupport()">Техн. Поддержка</button><br><br><br>
+		
+		<h1 style="color: red;">Пожалуйста, донатьте:</h1><br>
+		<a href="https://www.donationalerts.com/r/sasha_beliisr" target="_black"><h1 style="color: red;">Саша БелийMAX</h1></a><a href="https://www.donationalerts.com/r/teodorwhite" target="_black"><h1 style="color: red;">Teodor White</h1></a><br><br><br>
     </div>
 	
 	<div class="container" style="display: none;" id="key">
@@ -224,110 +237,93 @@
 	</div>
 	
 	<div class="container" style="display: none;" id="mods">
-		<a onclick="goMain()"><h1 style="color: blue;">Go to Main Menu</h1></a><br><br>
-		<h1 style="color: red;">13 Mods</h1>
+		<a onclick="goMain()"><h1 style="color: blue;">Вернутся</h1></a><br><br>
+		<h1 style="color: red;">11 Моды</h1>
 		
 		<table style="border-collapse: collapse; width: 47%; height: 39px;" border="1">
 			<tbody>
 				<tr style="height: 39px;">
 					<td style="width: 25%; height: 39px; text-align: center;">Security Craft</td>
-					<td style="width: 25%; height: 39px; text-align: center;">1.16.5-SecurityCraft-v1.9.7.1.jar</td>
-					<td style="width: 25%; height: 39px; text-align: center;">1.16.5</td>
-					<td style="width: 25%; height: 39px; text-align: center;"><span style="color: #00ff00;"><a style="color: #00ff00;" href="mods\1.16.5-SecurityCraft-v1.9.7.1.jar">Donwload</a></span></td>
+					<td style="width: 25%; height: 39px; text-align: center;">1.19.2-SecurityCraft-v1.9.6.1.jar</td>
+					<td style="width: 25%; height: 39px; text-align: center;">1.19.2</td>
+					<td style="width: 25%; height: 39px; text-align: center;"><span style="color: #00ff00;"><a style="color: #00ff00;" href="mods\1.19.2-SecurityCraft-v1.9.6.1.jar">Получить</a></span></td>
 				</tr>
 				
 				<tr style="height: 39px;">
 					<td style="width: 25%; height: 39px; text-align: center;">Modern Life</td>
-					<td style="width: 25%; height: 39px; text-align: center;">modernlife-1.16.5-1.51.jar</td>
-					<td style="width: 25%; height: 39px; text-align: center;">1.16.5</td>
-					<td style="width: 25%; height: 39px; text-align: center;"><span style="color: #00ff00;"><a style="color: #00ff00;" href="mods\modernlife-1.16.5-1.51.jar">Donwload</a></span></td>
+					<td style="width: 25%; height: 39px; text-align: center;">modernlife-1.19.2-1.59.jar</td>
+					<td style="width: 25%; height: 39px; text-align: center;">1.19.2</td>
+					<td style="width: 25%; height: 39px; text-align: center;"><span style="color: #00ff00;"><a style="color: #00ff00;" href="mods\modernlife-1.19.2-1.59.jar">Получить</a></span></td>
 				</tr>
 				
 				<tr style="height: 39px;">
 					<td style="width: 25%; height: 39px; text-align: center;">MrCrayfish's Furniture Mod</td>
-					<td style="width: 25%; height: 39px; text-align: center;">cfm-7.0.0pre22-1.16.3.jar</td>
-					<td style="width: 25%; height: 39px; text-align: center;">1.16.5</td>
-					<td style="width: 25%; height: 39px; text-align: center;"><span style="color: #00ff00;"><a style="color: #00ff00;" href="mods\cfm-7.0.0pre22-1.16.3.jar">Donwload</a></span></td>
+					<td style="width: 25%; height: 39px; text-align: center;">Furniture-Mod-7.0.0-pre35-1.19.2.jar</td>
+					<td style="width: 25%; height: 39px; text-align: center;">1.19.2</td>
+					<td style="width: 25%; height: 39px; text-align: center;"><span style="color: #00ff00;"><a style="color: #00ff00;" href="mods\Furniture-Mod-7.0.0-pre35-1.19.2.jar">Получить</a></span></td>
 				</tr>
 				
 				<tr style="height: 39px;">
 					<td style="width: 25%; height: 39px; text-align: center;">Simply Light</td>
-					<td style="width: 25%; height: 39px; text-align: center;">simplylight-1.16.5-1.4.2-build.32.jar</td>
-					<td style="width: 25%; height: 39px; text-align: center;">1.16.5 OptiFine</td>
-					<td style="width: 25%; height: 39px; text-align: center;"><span style="color: #00ff00;"><a style="color: #00ff00;" href="mods\simplylight-1.16.5-1.4.2-build.32.jar">Donwload</a></span></td>
+					<td style="width: 25%; height: 39px; text-align: center;">simplylight-1.19.2-1.4.5-build.42.jar</td>
+					<td style="width: 25%; height: 39px; text-align: center;">1.19.2 OptiFine</td>
+					<td style="width: 25%; height: 39px; text-align: center;"><span style="color: #00ff00;"><a style="color: #00ff00;" href="mods\simplylight-1.19.2-1.4.5-build.42.jar">Получить</a></span></td>
 				</tr>
 				
 				<tr style="height: 39px;">
 					<td style="width: 25%; height: 39px; text-align: center;">Just Enough Items (JEI)</td>
-					<td style="width: 25%; height: 39px; text-align: center;">jei-1.16.5-7.8.0.1009.jar</td>
-					<td style="width: 25%; height: 39px; text-align: center;">1.16.5</td>
-					<td style="width: 25%; height: 39px; text-align: center;"><span style="color: #00ff00;"><a style="color: #00ff00;" href="mods\jei-1.16.5-7.8.0.1009.jar">Donwload</a></span></td>
+					<td style="width: 25%; height: 39px; text-align: center;">jei-1.19.2-forge-11.6.0.1013.jar</td>
+					<td style="width: 25%; height: 39px; text-align: center;">1.19.2</td>
+					<td style="width: 25%; height: 39px; text-align: center;"><span style="color: #00ff00;"><a style="color: #00ff00;" href="mods\jei-1.19.2-forge-11.6.0.1013.jar">Получить</a></span></td>
 				</tr>
 				
 				<tr style="height: 39px;">
 					<td style="width: 25%; height: 39px; text-align: center;">Create Mod</td>
-					<td style="width: 25%; height: 39px; text-align: center;">create-mc1.16.5_v0.3.2g.jar</td>
-					<td style="width: 25%; height: 39px; text-align: center;">1.16.5</td>
-					<td style="width: 25%; height: 39px; text-align: center;"><span style="color: #00ff00;"><a style="color: #00ff00;" href="mods\create-mc1.16.5_v0.3.2g.jar">Donwload</a></span></td>
+					<td style="width: 25%; height: 39px; text-align: center;">create-1.19.2-0.5.1.b.jar</td>
+					<td style="width: 25%; height: 39px; text-align: center;">1.19.2</td>
+					<td style="width: 25%; height: 39px; text-align: center;"><span style="color: #00ff00;"><a style="color: #00ff00;" href="mods\create-1.19.2-0.5.1.b.jar">Получить</a></span></td>
 				</tr>
 				
 				<tr style="height: 39px;">
 					<td style="width: 25%; height: 39px; text-align: center;">FlyWeel</td>
-					<td style="width: 25%; height: 39px; text-align: center;">flywheel-1.16-0.2.5.jar</td>
-					<td style="width: 25%; height: 39px; text-align: center;">1.16.5</td>
-					<td style="width: 25%; height: 39px; text-align: center;"><span style="color: #00ff00;"><a style="color: #00ff00;" href="mods\flywheel-1.16-0.2.5.jar">Donwload</a></span></td>
-				</tr>
-				
-				<tr style="height: 39px;">
-					<td style="width: 25%; height: 39px; text-align: center;">Valkyrien Skies</td>
-					<td style="width: 25%; height: 39px; text-align: center;">ValkyrienSkies-Forge-1.16.5-v2.0.0-alpha6.jar</td>
-					<td style="width: 25%; height: 39px; text-align: center;">1.16.5</td>
-					<td style="width: 25%; height: 39px; text-align: center;"><span style="color: #00ff00;"><a style="color: #00ff00;" href="mods\ValkyrienSkies-Forge-1.16.5-v2.0.0-alpha6.jar">Donwload</a></span></td>
-				</tr>
-				
-				<tr style="height: 39px;">
-					<td style="width: 25%; height: 39px; text-align: center;">Cloth Api</td>
-					<td style="width: 25%; height: 39px; text-align: center;">cloth-config-4.16.91-1.16-forge.jar</td>
-					<td style="width: 25%; height: 39px; text-align: center;">1.16.5</td>
-					<td style="width: 25%; height: 39px; text-align: center;"><span style="color: #00ff00;"><a style="color: #00ff00;" href="mods\cloth-config-4.16.91-1.16-forge.jar">Donwload</a></span></td>
-				</tr>
-				
-				<tr style="height: 39px;">
-					<td style="width: 25%; height: 39px; text-align: center;">Architectury API Forge</td>
-					<td style="width: 25%; height: 39px; text-align: center;">architectury-1.32.68-forge-1.16.5.jar</td>
-					<td style="width: 25%; height: 39px; text-align: center;">1.16.5</td>
-					<td style="width: 25%; height: 39px; text-align: center;"><span style="color: #00ff00;"><a style="color: #00ff00;" href="mods\architectury-1.32.68-forge-1.16.5.jar">Donwload</a></span></td>
-				</tr>
-				
-				<tr style="height: 39px;">
-					<td style="width: 25%; height: 39px; text-align: center;">Eureka Airships</td>
-					<td style="width: 25%; height: 39px; text-align: center;">EurekaAirships-Forge-1.16.5-v1.0.0-alpha7.jar</td>
-					<td style="width: 25%; height: 39px; text-align: center;">1.16.5</td>
-					<td style="width: 25%; height: 39px; text-align: center;"><span style="color: #00ff00;"><a style="color: #00ff00;" href="mods\EurekaAirships-Forge-1.16.5-v1.0.0-alpha7.jar">Donwload</a></span></td>
+					<td style="width: 25%; height: 39px; text-align: center;">flywheel-forge-1.19.2-0.6.8.a.jar</td>
+					<td style="width: 25%; height: 39px; text-align: center;">1.19.2</td>
+					<td style="width: 25%; height: 39px; text-align: center;"><span style="color: #00ff00;"><a style="color: #00ff00;" href="mods\flywheel-forge-1.19.2-0.6.8.a.jar">Получить</a></span></td>
 				</tr>
 				
 				<tr style="height: 39px;">
 					<td style="width: 25%; height: 39px; text-align: center;">World Edit</td>
-					<td style="width: 25%; height: 39px; text-align: center;">worldedit-1.16.53-forge-fabric-7.2.5-dist.jar</td>
-					<td style="width: 25%; height: 39px; text-align: center;">1.16.5</td>
-					<td style="width: 25%; height: 39px; text-align: center;"><span style="color: #00ff00;"><a style="color: #00ff00;" href="mods\worldedit-1.16.53-forge-fabric-7.2.5-dist.jar">Donwload</a></span></td>
+					<td style="width: 25%; height: 39px; text-align: center;">WorldEdit-7.2.12-Forge-Fabric-for-MC-1.19.2.jar</td>
+					<td style="width: 25%; height: 39px; text-align: center;">1.19.2</td>
+					<td style="width: 25%; height: 39px; text-align: center;"><span style="color: #00ff00;"><a style="color: #00ff00;" href="mods\WorldEdit-7.2.12-Forge-Fabric-for-MC-1.19.2.jar">Получить</a></span></td>
 				</tr>
 				
 				<tr style="height: 39px;">
 					<td style="width: 25%; height: 39px; text-align: center;">Simple Voice Chat</td>
-					<td style="width: 25%; height: 39px; text-align: center;">voicechat-forge-1.16.5-2.4.16.jar</td>
-					<td style="width: 25%; height: 39px; text-align: center;">1.16.5</td>
-					<td style="width: 25%; height: 39px; text-align: center;"><span style="color: #00ff00;"><a style="color: #00ff00;" href="mods\voicechat-forge-1.16.5-2.4.16.jar">Donwload</a></span></td>
+					<td style="width: 25%; height: 39px; text-align: center;">voicechat-forge-1.19.2-2.4.16.jar</td>
+					<td style="width: 25%; height: 39px; text-align: center;">1.19.2</td>
+					<td style="width: 25%; height: 39px; text-align: center;"><span style="color: #00ff00;"><a style="color: #00ff00;" href="mods\voicechat-forge-1.19.2-2.4.16.jar">Получить</a></span></td>
 				</tr>
 				
 				<tr style="height: 39px;">
 					<td style="width: 25%; height: 39px; text-align: center;">More Red</td>
-					<td style="width: 25%; height: 39px; text-align: center;">morered-1.16.5-2.1.1.0.jar</td>
-					<td style="width: 25%; height: 39px; text-align: center;">1.16.5</td>
-					<td style="width: 25%; height: 39px; text-align: center;"><span style="color: #00ff00;"><a style="color: #00ff00;" href="mods\morered-1.16.5-2.1.1.0.jar">Donwload</a></span></td>
+					<td style="width: 25%; height: 39px; text-align: center;">morered-1.19.2-3.0.0.2.jar</td>
+					<td style="width: 25%; height: 39px; text-align: center;">1.19.2</td>
+					<td style="width: 25%; height: 39px; text-align: center;"><span style="color: #00ff00;"><a style="color: #00ff00;" href="mods\morered-1.19.2-3.0.0.2.jar">Получить</a></span></td>
+				</tr>
+				
+				<tr style="height: 39px;">
+					<td style="width: 25%; height: 39px; text-align: center;">Extended Slabs</td>
+					<td style="width: 25%; height: 39px; text-align: center;">extendedslabs-1.19.2-2.4.0.jar</td>
+					<td style="width: 25%; height: 39px; text-align: center;">1.19.2</td>
+					<td style="width: 25%; height: 39px; text-align: center;"><span style="color: #00ff00;"><a style="color: #00ff00;" href="mods\extendedslabs-1.19.2-2.4.0.jar">Получить</a></span></td>
 				</tr>
 			</tbody>
 		</table>
+	</div>
+	
+	<div class="container" style="display: none;" id="support">
+		¯\_(ツ)_/¯
 	</div>
 </body>
 </html>
